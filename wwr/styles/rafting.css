@@ -218,7 +218,7 @@ main h1 {
 /* Contact Form - now in grid */
 .contact-form form {
     background-color: var(--light-grey);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
@@ -239,11 +239,12 @@ main h1 {
 .form-item input[type="email"],
 .form-item textarea {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.75rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-family: var(--body-font);
+    box-sizing: border-box;
 }
 
 fieldset {
