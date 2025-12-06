@@ -79,9 +79,12 @@
                 <fieldset>
                     <legend>Purpose of Message</legend>
                     <div class="radio-group">
-                        <label><input type="radio" name="purpose" value="inquiry" checked> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                        <label for="purpose-inquiry"><input type="radio" id="purpose-inquiry" name="purpose"
+                                value="inquiry" checked> General Inquiry</label>
+                        <label for="purpose-reservation"><input type="radio" id="purpose-reservation" name="purpose"
+                                value="reservation"> Reservation Question</label>
+                        <label for="purpose-suggestion"><input type="radio" id="purpose-suggestion" name="purpose"
+                                value="suggestion"> Website Suggestion</label>
                     </div>
                 </fieldset>
 
@@ -91,7 +94,8 @@
                 </div>
 
                 <div class="checkbox-item">
-                    <label><input type="checkbox" name="newsletter"> Please subscribe me to the monthly
+                    <label for="newsletter"><input type="checkbox" id="newsletter" name="newsletter"> Please subscribe
+                        me to the monthly
                         newsletter</label>
                 </div>
 
