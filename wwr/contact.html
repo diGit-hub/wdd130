@@ -22,31 +22,63 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <img src="images/hero.jpg"
-                alt="Group of people whitewater rafting on a river with green trees in the background">
-            <h1>Contact Us</h1>
-        </div>
+        <h1>Dry Oar Rafting</h1>
 
         <section class="contact-info">
-            <h2>Get In Touch</h2>
-            <div class="info-grid">
-                <div class="details">
-                    <p><strong>Address:</strong> 123 River Road, Raft City, ID 83440</p>
-                    <p><strong>Phone:</strong> (208) 555-0199</p>
-                    <p><strong>Email:</strong> info@dryoarrafting.com</p>
-                </div>
-                <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f6292b1!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1611816550604!5m2!1sen!2sus"
-                        width="400" height="300" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+            <p><strong>Address:</strong> 123 River Road, Raft City, ID 83440</p>
+            <p><strong>Phone:</strong> (208) 555-0199</p>
+            <p><strong>Email:</strong> info@dryoarrafting.com</p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153169!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f6292b1!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1611816550604!5m2!1sen!2sus"
+                    width="400" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="get">
+                    <div class="form-item">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <fieldset>
+                        <legend>Purpose of Message</legend>
+                        <div class="radio-group">
+                            <label for="purpose-inquiry"><input type="radio" id="purpose-inquiry" name="purpose"
+                                    value="inquiry" checked> General Inquiry</label>
+                            <label for="purpose-reservation"><input type="radio" id="purpose-reservation" name="purpose"
+                                    value="reservation"> Reservation Question</label>
+                            <label for="purpose-suggestion"><input type="radio" id="purpose-suggestion" name="purpose"
+                                    value="suggestion"> Website Suggestion</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-item">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <label for="newsletter"><input type="checkbox" id="newsletter" name="newsletter"> Please
+                            subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
 
         <section class="team">
-            <h2>Meet Our Team</h2>
+            <h2>We Are Here to Serve You</h2>
             <div class="team-grid">
                 <figure>
                     <img src="images/employee1.jpg" alt="Sarah Jenkins">
@@ -61,46 +93,6 @@
                     <figcaption>David Lee - Expedition Leader</figcaption>
                 </figure>
             </div>
-        </section>
-
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="#" method="get">
-                <div class="form-item">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-item">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <fieldset>
-                    <legend>Purpose of Message</legend>
-                    <div class="radio-group">
-                        <label for="purpose-inquiry"><input type="radio" id="purpose-inquiry" name="purpose"
-                                value="inquiry" checked> General Inquiry</label>
-                        <label for="purpose-reservation"><input type="radio" id="purpose-reservation" name="purpose"
-                                value="reservation"> Reservation Question</label>
-                        <label for="purpose-suggestion"><input type="radio" id="purpose-suggestion" name="purpose"
-                                value="suggestion"> Website Suggestion</label>
-                    </div>
-                </fieldset>
-
-                <div class="form-item">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <div class="checkbox-item">
-                    <label for="newsletter"><input type="checkbox" id="newsletter" name="newsletter"> Please subscribe
-                        me to the monthly
-                        newsletter</label>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
         </section>
 
     </main>
