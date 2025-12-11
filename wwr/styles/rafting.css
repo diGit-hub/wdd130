@@ -1,12 +1,14 @@
 :root {
   --primary-color: #003049;
   --secondary-color: #d62828;
-  --accent1-color: #0057B8;
-  --accent2-color: #fcbf49;
+  --accent1-color: #d62828;
+  --accent1-color-a: rgba(214, 40, 40, 0.7);
+  --accent2-color: #0151AF;
+  --accent2-color-a: rgba(1, 81, 175, 0.7);
   --white: #fff;
   --light-grey: #f9f9f9;
   --border-color: #ccc;
-  
+
   --heading-font: "Times New Roman", serif;
   --body-font: Arial, sans-serif;
 }
@@ -23,7 +25,9 @@ body {
   padding: 0;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   max-width: 840px;
   margin: 0 auto;
 }
@@ -62,12 +66,18 @@ nav a:hover {
   color: var(--accent1-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--primary-color);
 }
 
-section, article {
+section,
+article {
   margin: 1rem;
   padding: 0.5rem;
 }
@@ -109,7 +119,12 @@ footer p {
 
 /* Hero Section Styles */
 .hero {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
   position: relative;
+  border-radius: 4px;
 }
 
 .hero img {
@@ -124,43 +139,100 @@ footer p {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
+  background-color: var(--accent1-color-a);
   color: var(--white);
 }
 
 .hero article {
   position: absolute;
-  top: 85px;
+  top: 120px;
   right: 40px;
   left: 40px;
   background-color: var(--accent2-color);
   padding: 20px;
+  border-radius: 4px;
 }
 
 .hero article img {
   float: right;
   width: 125px;
   margin-left: 1rem;
+  border-radius: 4px;
 }
 
 .hero article p {
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.5;
+  color: var(--light-grey);
 }
 
-/* Adventure Section - Figure Grid */
-section:nth-of-type(2) {
+/* Home Page Hero */
+.hero-home {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+
+.hero-home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-home h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: var(--accent1-color-a);
+  color: var(--white);
+}
+
+.cta-button {
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  top: 320px;
+  right: 40px;
+  left: 40px;
+  background-color: var(--accent2-color);
+  padding: 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--heading-font);
+  color: var(--light-grey);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent2-color-a);
+}
+
+/* Adventure gallery (About page only) */
+.adventure-gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0.5rem;
   margin: 2rem 1rem;
 }
 
-section:nth-of-type(2) h2 {
+.adventure-gallery h2 {
   grid-column: 1 / -1;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .adventure-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 figure {
@@ -184,153 +256,318 @@ figcaption {
 
 /* Contact Page Styling */
 main h1 {
-    text-align: center;
-    margin: 2rem 0 1rem;
-    font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
 }
 
 .contact-info {
-    text-align: center;
-    margin: 1rem auto 2rem;
+  text-align: center;
+  margin: 1rem auto 2rem;
 }
 
 .contact-info p {
-    margin: 0.3rem 0;
-    font-size: 1rem;
+  margin: 0.3rem 0;
+  font-size: 1rem;
 }
 
 /* Two-column grid: Map | Form */
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 2rem 1rem;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 1rem;
+  align-items: stretch;
 }
 
 .map iframe {
-    width: 100%;
-    height: 450px;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Form - now in grid */
 .contact-form form {
-    background-color: var(--light-grey);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .form-item {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-item label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 0.95rem;
 }
 
 .form-item input[type="text"],
 .form-item input[type="email"],
 .form-item textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: var(--body-font);
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  box-sizing: border-box;
 }
 
 fieldset {
-    border: 1px solid var(--border-color);
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
+  border: 1px solid var(--border-color);
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
 }
 
 legend {
-    padding: 0 0.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 0.95rem;
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 0.95rem;
 }
 
 .radio-group label {
-    display: block;
-    margin-bottom: 0.4rem;
-    font-weight: normal;
-    cursor: pointer;
-    font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .checkbox-item {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .checkbox-item label {
-    cursor: pointer;
-    font-size: 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 button[type="submit"] {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: var(--heading-font);
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--heading-font);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 /* Team Grid - horizontal at bottom */
 .team {
-    margin: 3rem 1rem 2rem;
+  margin: 3rem 1rem 2rem;
+  align-items: center;
 }
 
 .team h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 700px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .team-grid figure {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .team-grid img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--accent1-color);
-    margin: 0 auto;
-    display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent2-color);
+  margin: 0 auto;
+  display: block;
 }
 
 .team-grid figcaption {
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    font-weight: bold;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
+/* Newsletter Section */
+
+.newsletter-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 12px;
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem 1rem;
+  align-items: center;
+}
+
+.info {
+  text-align: center;
+  align-items: center;
+}
+
+.newsletter-form {
+  margin-bottom: 1rem;
+}
+
+.newsletter-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Offers Grid */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 840px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.offers-grid h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.offer {
+  display: contents;
+}
+
+.offer img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+}
+
+.offer-text {
+  padding: 1rem 0;
+}
+
+.offer-text h3 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Rafting Trips Page Styles */
+.hero-home .trips-cta {
+  min-width: 250px;
+}
+
+.trips-descriptions {
+  margin: 3rem 1rem;
+}
+
+.trips-descriptions h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3rem;
+}
+
+.trip-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card h3 {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.8rem;
+  margin: 0;
+  text-align: center;
+}
+
+.trip-card p {
+  padding: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: var(--body-font);
+}
+
+.trips-table-section {
+  margin: 3rem 1rem;
+  overflow-x: auto;
+}
+
+.trips-table-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--light-grey);
+}
+
+tr:hover {
+  background-color: rgba(1, 81, 175, 0.2);
+}
+
+@media (max-width: 600px) {
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+}
